@@ -1,0 +1,18 @@
+@media (max-width: 34em) {
+  body {
+    background-color: rgb(17, 17, 20);
+  }
+
+  .navbar-toggler-icon {
+    filter: invert(100%);
+  }
+
+  .toggleBg {
+    background-color: #3b3b3bc2;
+  }
+
+  .mobile-pos {
+    position: absolute;
+    top: 30%;
+  }
+}

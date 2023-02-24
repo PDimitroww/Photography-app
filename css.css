@@ -1,0 +1,322 @@
+:root {
+  --h1: #ffffff;
+  --h2: #353535;
+  --textColor: #4d4d4d;
+  --buttonsColor: #ffad41;
+  --hover: #ff771c;
+  --background: #ffedac;
+  --backgroundOpacity: #000000a6;
+  --link: #fff;
+}
+
+/* BODY STYLES */
+
+body {
+  font-family: "Spectral", sans-serif;
+}
+
+/* CSS RESET & REUSABLE CONTENT */
+
+.btnReset {
+  border: 0;
+  background: none;
+}
+
+.section {
+  padding: 5rem 10rem;
+  max-width: 100%;
+  height: auto;
+  transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+}
+
+h3,
+h4 {
+  color: var(--h2);
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  color: var(--textColor);
+  margin-bottom: 0;
+}
+
+.heading-h2 {
+  color: var(--h2);
+  position: relative;
+  font-size: 3.2rem;
+  font-weight: 400;
+}
+
+.mt-8 {
+  margin-top: 6rem;
+}
+
+.mt-10 {
+  margin-top: 10rem;
+}
+
+.pl-8 {
+  padding-left: 10rem;
+}
+
+/* NAV */
+
+.nav-link {
+  font-size: 1.4rem;
+  color: var(--link);
+}
+
+.navbar {
+  padding: 2rem 0 2rem 0;
+}
+
+.stickyNav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  padding: 0;
+  background-color: var(--backgroundOpacity);
+}
+
+.active a {
+  color: var(--buttonsColor);
+}
+
+/* HEADING SECTION */
+
+.header {
+  max-width: 100%;
+  max-height: auto;
+}
+
+.display-1.display-1 {
+  font-weight: 700;
+  font-size: 4rem;
+  color: var(--h1);
+}
+
+.scroll {
+  width: 18rem;
+  border-radius: 1rem;
+  background: var(--buttonsColor);
+  color: #fff;
+  font-size: 2.4rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  transition: all 0.5s ease;
+}
+
+.scroll:hover {
+  border-radius: 4rem;
+  background: var(--hover);
+}
+
+/* Section About */
+.heading-h2:before {
+  content: "";
+  width: 70%;
+  height: 2px;
+  background: var(--buttonsColor);
+  position: absolute;
+  bottom: 0;
+}
+
+.camera-size {
+  width: 25rem;
+}
+
+.phone {
+  position: relative;
+}
+
+.phone::after {
+  content: "";
+  height: 130%;
+  width: 110%;
+  background-color: var(--background);
+  box-shadow: 0 0 1rem 10px var(--background);
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Section Shots */
+
+.gallery-Btn:link,
+.gallery-Btn:visited {
+  color: var(--buttonsColor);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.gallery-Btn:hover,
+.gallery-Btn:active {
+  color: var(--buttonsColor);
+}
+
+/* MODAL WINDOW */
+
+.myModal {
+  display: none;
+  position: fixed;
+  z-index: 8;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.527);
+}
+
+.img-fluid {
+  cursor: pointer;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 25%;
+  margin-top: 5rem;
+  text-align: center;
+  width: 50%;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+.modal-image {
+  display: inline-block;
+}
+
+.blur:hover {
+  opacity: 0.7;
+}
+
+/* The Close Button */
+.close {
+  color: #000000;
+  display: inline-block;
+  font-size: 3.5rem;
+  width: 2rem;
+  height: 1rem;
+  margin-left: 95%;
+  z-index: 9;
+}
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* CREW */
+
+.box {
+  width: 34rem;
+  background: #fff;
+  padding: 20px;
+  position: relative;
+  border-radius: 0 2rem 2rem 2rem;
+}
+
+.sb1:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-right: 10px solid #fff;
+  border-left: 10px solid transparent;
+  border-top: 10px solid #fff;
+  border-bottom: 10px solid transparent;
+  left: -20px;
+  top: 0;
+}
+
+.box-2 {
+  width: 34rem;
+  background: #fff;
+  padding: 20px;
+  position: relative;
+  border-radius: 2rem 0 2rem 2rem;
+}
+
+.sb-2:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #fff;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+  border-bottom: 10px solid transparent;
+  right: -20px;
+  top: 0px;
+}
+
+.blockquote-footer {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+/* REVIEWS */
+
+.reviews {
+  background-color: var(--background);
+}
+/* Contact */
+
+form {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 2rem 0 0 2rem;
+  border: 1px solid var(--buttonsColor);
+  border-right: none;
+}
+
+.contact-img {
+  border-radius: 0 2rem 2rem 0;
+  border: 1px solid var(--buttonsColor);
+  border-left: none;
+  height: 33.364rem;
+}
+
+.form-control {
+  resize: none;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  height: 10rem;
+  justify-content: center;
+  align-items: center;
+  color: var(--textColor);
+  background-color: var(--background);
+  border-top: 1px solid #ffa600;
+}
